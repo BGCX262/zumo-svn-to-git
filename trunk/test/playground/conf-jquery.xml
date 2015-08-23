@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<zumo>
+
+    <include target="conf-jquery-addition.xml"/>
+
+	<views>
+
+		<page id="grey" target="#grey" mediator="views.LogMediator">
+			<handler type="startup"/>
+			<handler target="#linkGrey" type="click"/>
+			<handler target="#pages .orange" type="click"/>
+		</page>
+
+		<page id="purple" type="dom" target="#purple" depends="brown">
+			<prop target="#content"><![CDATA[I am a nice header]]></prop>
+			<handler target="#linkPurple" type="click" at="grey"/>
+		</page>
+
+		<page id="orange" type="domclone" target="#templates .orange" container="#pages">
+			<handler target="#linkOrange" type="click"/>
+		</page>
+
+		<page id="white" type="loader" target="news.txt" container="#white" mediator="views.LogMediator">
+			<handler target="#linkWhite" type="click"/>
+		</page>
+
+		<page id="green" type="builder" target="views.Green" container="#pages" mediator="views.LogMediator">
+			<handler target="#linkGreen" type="click"/>
+		</page>
+
+		<page id="transparent" type="void" depends="brown, pink">
+			<handler target="#linkTransparent" type="click"/>
+		</page>
+
+        <block id="pink" target="#pink">
+            <handler target="#linkPink" type="click"/>
+            <handler target="#clearPink" type="click" action="clearBlock"/>
+        </block>
+
+	</views>
+
+</zumo>

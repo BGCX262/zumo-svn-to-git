@@ -1,0 +1,24 @@
+#summary Code conventions through the Zumo Framework.
+
+= Introduction =
+
+Internal coding style, formatting and patterns used thorough the sources of the Zumo Framework.
+
+
+= Conventions =
+
+  * Use spaces instead of tabs
+
+  * Lines should not be longer than 120 characters
+
+  * When a line is too long, break after an operator; the next line should start matching the group opener (e.g. parenthesis)
+
+ * Framework objects (singletons) are preceded with 2 line breaks and a comment line with format:
+   `// *** {OBJECT NAME} - OBJECT`
+   
+   Where {OBJECT NAME} is the actual name of the !JavaScript object in uppercase and with spaces between words (e.g. !XmlConfParser becomes XML CONF PARSER)
+
+ * Framework constructor functions (classes) are preceded with 2 line breaks and a comment line with format
+   `// *** {FUNCTION NAME} - CONSTRUCTOR`
+
+   Where {FUNCTION NAME} is the actual name of the !JavaScript function in uppercase and with spaces between words (e.g. !HandlerManager becomes HANDLER MANAGER)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<zumo>
+
+    <include target="conf-jquery-addition-commands.xml"/>
+
+	<views>
+
+		<block id="brown" target="#brown">
+			<handler target="#linkBrown" type="click"/>
+			<handler target="#clearBrown" type="click" action="clearBlock"/>
+		</block>
+
+	</views>
+
+    <commands>
+
+        <command id="alert" target="alert">
+            <prop name="_args">
+                <item>Hello!</item>
+            </prop>
+            <handler target="#linkAlert" type="click"/>
+            <handler type="hello"/>
+        </command>
+
+    </commands>
+
+</zumo>
